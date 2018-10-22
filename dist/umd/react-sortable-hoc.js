@@ -926,7 +926,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              hideSortableGhost = _this$props3.hideSortableGhost,
 	              onSortStart = _this$props3.onSortStart,
 	              useWindowAsScrollContainer = _this$props3.useWindowAsScrollContainer,
-	              ghostParent = _this$props3.ghostParent;
+	              useContainerAsSortableHelperParent = _this$props3.useContainerAsSortableHelperParent;
 	          var node = active.node,
 	              collection = active.collection;
 	          var index = node.sortableInfo.index;
@@ -975,8 +975,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	          });
 
-	          var ghostParentElement = ghostParent || _this.document.body;
-	          _this.helper = ghostParentElement.appendChild(clonedNode);
+	          var helperParent = useContainerAsSortableHelperParent ? _this.container : _this.document.body;
+	          _this.helper = helperParent.appendChild(clonedNode);
 
 	          _this.helper.style.position = 'fixed';
 	          _this.helper.style.top = _this.boundingClientRect.top - margin.top + 'px';
@@ -1497,7 +1497,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    pressThreshold: 5,
 	    distance: 0,
 	    useWindowAsScrollContainer: false,
-	    ghostParent: false,
+	    useContainerAsSortableHelperParent: false,
 	    hideSortableGhost: true,
 	    shouldCancelStart: function shouldCancelStart(e) {
 	      // Cancel sorting if the event target is an `input`, `textarea`, `select` or `option`
@@ -1530,7 +1530,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    pressDelay: _propTypes2.default.number,
 	    useDragHandle: _propTypes2.default.bool,
 	    useWindowAsScrollContainer: _propTypes2.default.bool,
-	    ghostParent: _propTypes2.default.oneOfType([_propTypes2.default.bool, _propTypes2.default.instanceOf(Element)]),
+	    useContainerAsSortableHelperParent: _propTypes2.default.bool,
 	    hideSortableGhost: _propTypes2.default.bool,
 	    lockToContainerEdges: _propTypes2.default.bool,
 	    lockOffset: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string, _propTypes2.default.arrayOf(_propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]))]),
