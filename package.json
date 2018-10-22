@@ -46,7 +46,6 @@
     "test": "eslint src/** --ext .js"
   },
   "dependencies": {
-    "babel-runtime": "^6.11.6",
     "invariant": "^2.2.1",
     "lodash": "^4.12.0",
     "prop-types": "^15.5.7"
@@ -75,11 +74,14 @@
     "babel-preset-stage-1": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "babel-register": "^6.3.13",
+    "babel-runtime": "^6.26.0",
+    "caniuse-db": "^1.0.30000893",
     "classnames": "^2.2.5",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.1",
     "eslint": "^3.16.1",
     "eslint-config-react-app": "^0.6.1",
+    "eslint-module-utils": "^2.2.0",
     "eslint-plugin-flowtype": "^2.21.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^4.0.0",
@@ -107,6 +109,7 @@
     "stack-source-map": "^1.0.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.9.11",
+    "webpack-core": "^0.6.9",
     "webpack-dashboard": "^0.2.1",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.9.1",
